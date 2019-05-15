@@ -50,7 +50,7 @@ postgres:
   sslkey: <%= ENV['DB_ENV_POSTGRESQL_SSLKEY'] || nil %>
 
 edodb:
-  fake: false
+  fake: true
   adapter: h2
   driver: org.h2.Driver
   url: jdbc:h2:mem:h2SisedoOracle::SisedoDataSource;DB_CLOSE_DELAY=-1;MODE=Oracle
