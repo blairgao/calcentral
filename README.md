@@ -26,9 +26,9 @@ For detailed installation process, please refer to the step 1-15 from the CalCen
 
   ```yml
   edodb:
-    fake: true
-    ```
-    **Note**: to disable the database stubbing feature, simply revert the fake flag to `false`
+  fake: true
+  ```
+  **Note**: to disable the database stubbing feature, simply revert the fake flag to `false`
 
 2. To insert new fake responses, open `config/initializer/populate_sisedo_h2.rb` and edit the insert clauses immediately after `CREATE TABLE SISEDO.STUBBED_RESPONSE`, e.g:
   ```SQL
