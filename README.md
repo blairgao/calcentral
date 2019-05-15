@@ -30,7 +30,7 @@ For detailed installation process, please refer to the step 1-15 from the CalCen
     ```
     **Note**: to disable the database stubbing feature, simply revert the fake flag to `false`
 
-1. To insert new fake responses, open `config/initializer/populate_sisedo_h2.rb` and edit the insert clauses immediately after `CREATE TABLE SISEDO.STUBBED_RESPONSE`, e.g:
+2. To insert new fake responses, open `config/initializer/populate_sisedo_h2.rb` and edit the insert clauses immediately after `CREATE TABLE SISEDO.STUBBED_RESPONSE`, e.g:
   ```SQL
     DROP TABLE IF EXISTS SISEDO.STUBBED_RESPONSES;
     CREATE TABLE SISEDO.STUBBED_RESPONSES (
@@ -42,13 +42,13 @@ For detailed installation process, please refer to the step 1-15 from the CalCen
   ```
   **Note**: One example is given with query_id of 1, the length limit of the fake response is 4000 character.
 
-1. Start the server in interactive mode
+3. Start the server in interactive mode
   ```bash
   rails c
   ```
   This should bring you to JRuby interactive console
 
-1. To retrieve the inserted fake response, type in
+4. To retrieve the inserted fake response, type in
   ```Ruby
   EdoOracle::Queries.search_students([your_query_id])
   ```
